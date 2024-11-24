@@ -102,7 +102,9 @@ require("lazy").setup({
   {
     "hrsh7th/nvim-cmp",
     dependencies = {
-      "lspkind.nvim",
+      "L3MON4D3/LuaSnip",
+      "saadparwaiz1/cmp_luasnip",
+      "onsails/lspkind.nvim",
       "hrsh7th/cmp-nvim-lsp", -- lsp auto-completion
       "hrsh7th/cmp-buffer", -- buffer auto-completion
       "hrsh7th/cmp-path",  -- path auto-completion
@@ -115,7 +117,7 @@ require("lazy").setup({
   -- Code snippet engine
   {
     "L3MON4D3/LuaSnip",
-    version = "v2.*",
+    dependencies = { "rafamadriz/friendly-snippets" },
   },
   -- Git integration
   "tpope/vim-fugitive",
@@ -298,6 +300,13 @@ require("lazy").setup({
     },
     config = function()
       require("config.neo-tree")
+    end,
+  },
+  -- nvim transparent
+  {
+    "xiyaowong/transparent.nvim",
+    config = function()
+      require("config.transparent")
     end,
   },
 })

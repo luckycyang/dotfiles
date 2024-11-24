@@ -1,6 +1,6 @@
 -- Hint: use `:h <option>` to figure out the meaning if needed
 vim.opt.clipboard = "unnamedplus" -- use system clipboard
-vim.opt.completeopt = { "menuone", "noselect", "noinsert" }
+vim.opt.completeopt = { "menu", "menuone", "noinsert" }
 vim.opt.mouse = "a"               -- allow the mouse to be used in Nvim
 vim.opt.scrolloff = 10            -- no less than 10 lines even if you keep scrolling down
 vim.wo.wrap = false
