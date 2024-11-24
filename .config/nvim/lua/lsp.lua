@@ -152,6 +152,9 @@ if not configs.cangjie then
   }
 end
 
+-- For Scala
 lspconfig.metals.setup({
   on_attach = on_attach,
 })
+
+
