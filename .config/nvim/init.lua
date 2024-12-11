@@ -1,18 +1,20 @@
--- load options
 require("options")
-
--- load keymappings
 require("keymaps")
 
--- load Packervim
-require("plugins")
+require('plugins')
 
--- load bufferline
-require('config.bufferline')
+-- Color theme
+require('colortheme')
 
--- Set colorscheme
-require("colorscheme")
 
--- Set LSP
-require("lsp")
+-- cmp
+require('config.completion')
 
+
+
+-- lsp
+require("config.lsp")
+
+
+-- utils
+require('config.utils')

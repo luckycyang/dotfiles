@@ -1,7 +1,7 @@
 -- Define common options
 local opts = {
-  noremap = true, -- non-recursive
-  silent = true, -- do not show message
+	noremap = true, -- non-recursive
+	silent = true, -- do not show message
 }
 vim.g.mapleader = " "
 -----------------
@@ -26,10 +26,6 @@ vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 -- default leader key: \
 vim.keymap.set("n", "<C-e>", ":Neotree<CR>", { desc = "Open Neotree" })
 
--- Open Term
-vim.keymap.set('n', '<leader>tT', "<cmd>term<cr>", { silent = true })
-
-
 -----------------
 -- Visual mode --
 -----------------
@@ -38,9 +34,14 @@ vim.keymap.set('n', '<leader>tT', "<cmd>term<cr>", { silent = true })
 vim.keymap.set("v", "<", "<gv", opts)
 vim.keymap.set("v", ">", ">gv", opts)
 
+vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
+vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
+
 -- For nvim-treesitter
 -- 1. Press `gss` to intialize selection. (ss = start selection)
 -- 2. Now we are in the visual mode.
 -- 3. Press `gsi` to increment selection by AST node. (si = selection incremental)
 -- 4. Press `gsc` to increment selection by scope. (sc = scope)
 -- 5. Press `gsd` to decrement selection. (sd = selection decrement)
+
+vim.keymap.set("n", "<leader>cf", "<cmd>lua vim.lsp.buf.format()<cr>", { silent = true, desc = "Format code" })
