@@ -1,6 +1,4 @@
 require("chatgpt").setup({
-  -- from stdout get info
-  api_key_cmd = "pass show api/tokens/openai",
 
   openai_params = {
     -- NOTE: model can be a function returning the model name
