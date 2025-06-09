@@ -7,14 +7,3 @@ require('plugins')
 require('colortheme')
 
 
--- cmp
-require('config.completion')
-
-
-
--- lsp
-require("config.lsp")
-
-
--- utils
-require('config.utils')
