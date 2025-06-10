@@ -26,16 +26,27 @@ return {
     --
     -- See :h blink-cmp-config-keymap for defining your own keymap
     keymap = {
-      preset = 'default',
-      ['<C-k>'] = { 'select_prev', 'fallback_to_mappings' },
-      ['<C-j>'] = { 'select_next', 'fallback_to_mappings' },
-      ['<Tab>'] = { 'snippet_forward', 'fallback' },
-      ['<S-Tab>'] = { 'snippet_backward', 'fallback' },
-      ['<C-p>'] = { 'scroll_documentation_up', 'fallback' },
-      ['<C-n>'] = { 'scroll_documentation_down', 'fallback' },
-      ['<C-d>'] = { 'show', 'show_documentation', 'hide_documentation' },
-      ['<C-e>'] = { 'hide' },
-      ['<C-CR>'] = { 'select_and_accept' },
+      ["<C-CR>"] = { "show", "show_documentation", "hide_documentation" },
+      ["<C-e>"] = { "hide", "fallback" },
+      ["<CR>"] = { "accept", "fallback" },
+      ["<Tab>"] = {
+        function(cmp)
+          return cmp.select_next()
+        end,
+        "snippet_forward",
+        "fallback",
+      },
+      ["<S-Tab>"] = {
+        function(cmp)
+          return cmp.select_prev()
+        end,
+        "snippet_backward",
+        "fallback",
+      },
+      ["<C-k>"] = { "select_prev", "fallback" },
+      ["<C-j>"] = { "select_next", "fallback" },
+      ["<C-up>"] = { "scroll_documentation_up", "fallback" },
+      ["<C-down>"] = { "scroll_documentation_down", "fallback" },
 
     },
 
