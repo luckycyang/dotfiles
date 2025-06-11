@@ -5,7 +5,17 @@ return {
   -- example using `opts` for defining servers
   opts = {
     servers = {
-      zls           = {},
+      zls           = {
+        settings = {
+          zls = {
+            enable_inlay_hints = true,
+            inlay_hints_show_builtin = true,
+            inlay_hints_exclude_single_argument = true,
+            inlay_hints_hide_redundant_param_names = false,
+            inlay_hints_hide_redundant_param_names_last_token = false,
+          },
+        }
+      },
       yamlls        = {},
       terraformls   = {},
       slint_lsp     = {},
@@ -16,7 +26,19 @@ return {
       gopls         = {},
       dartls        = {},
       cmake         = {},
-      clangd        = {},
+      clangd        = {
+        settings = {
+          clangd = {
+            InlayHints = {
+              Designators = true,
+              Enabled = true,
+              ParameterNames = true,
+              DeducedTypes = true,
+            },
+            fallbackFlags = { "-std=c++20" },
+          },
+        }
+      },
       hls           = {},
       rust_analyzer = {},
       eslint        = {},

@@ -1,4 +1,4 @@
--- Bootstrap lazy.nvim
+-- Bootstrap lazy.
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = "https://github.com/folke/lazy.nvim.git"
@@ -48,5 +48,13 @@ require("lazy").setup({
     require('config.utils.telescope'),
     -- witch-key
     require('config.utils.witch-key'),
+    -- trouble that noice error
+    require('config.mise.trouble'),
+    -- inlay-hints
+    require('config.mise.inlay-hints'),
+    -- nvim-dap
+    require('config.mise.nvim-dap'),
+    -- nvim-dap-ui
+    require('config.mise.nvim-dap-ui'),
   }
 })
