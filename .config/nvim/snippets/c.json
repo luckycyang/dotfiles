@@ -1,0 +1,14 @@
+{
+  "dox": {
+    "prefix": "dox",
+    "body": [
+      "/**",
+      " * @brief ${1:Brief description of the function}",
+      " * ",
+      " * @param ${2:param_name} ${3:Parameter description}",
+      " * @return ${4:Return value description}",
+      " */"
+    ],
+    "description": "Doxygen-style function comment for C/C++"
+  }
+}

@@ -3,6 +3,17 @@ return {
   config = function()
     local dap = require("dap")
 
+    --
+    vim.fn.sign_define('DapBreakpoint',
+      { text = '', texthl = 'DapBreakpoint', linehl = 'DapBreakpoint', numhl = 'DapBreakpoint' })
+    vim.fn.sign_define('DapBreakpointCondition',
+      { text = 'ﳁ', texthl = 'DapBreakpoint', linehl = 'DapBreakpoint', numhl = 'DapBreakpoint' })
+    vim.fn.sign_define('DapBreakpointRejected',
+      { text = '', texthl = 'DapBreakpoint', linehl = 'DapBreakpoint', numhl = 'DapBreakpoint' })
+    vim.fn.sign_define('DapLogPoint',
+      { text = '', texthl = 'DapLogPoint', linehl = 'DapLogPoint', numhl = 'DapLogPoint' })
+    vim.fn.sign_define('DapStopped', { text = '', texthl = 'DapStopped', linehl = 'DapStopped', numhl = 'DapStopped' })
+
     -- Keymappings for DAP
     vim.keymap.set("n", "<leader>db", dap.toggle_breakpoint, { desc = "DAP: Toggle Breakpoint" })
     vim.keymap.set("n", "<leader>dc", dap.continue, { desc = "DAP: Continue" })
@@ -22,8 +33,9 @@ return {
       codelldb = require('config.mise.dap.adapter.codelldb')
     }
     dap.configurations = {
-      rust = require("config.mise.dap.configuration.rust"),
+      rust = require("config.mise.dap.configuration.cpp"),
       cpp = require("config.mise.dap.configuration.cpp"),
+      c = require("config.mise.dap.configuration.cpp"),
     }
   end,
 }

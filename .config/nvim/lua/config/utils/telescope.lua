@@ -26,6 +26,7 @@ return {
         o = { builtin.oldfiles, "Old Files" },                                                           -- <leader>fo 的功能和描述
         c = { function() builtin.grep_string({ search = vim.fn.input("Grep > ") }) end, "Grep String" }, -- <leader>fc 的功能和描述
         l = { builtin.live_grep, "Live Grep" },                                                          -- <leader>fl 的功能和描述
+        b = { ':Telescope buffers<CR>', "Buffers" }
       },
     }, { prefix = "<leader>" })
   end

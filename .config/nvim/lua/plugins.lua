@@ -41,7 +41,7 @@ require("lazy").setup({
     -- neo-tree
     require('config.utils.neo-tree'),
     -- bufferline
-    require('config.utils.bufferline'),
+    -- require('config.utils.bufferline'),
     -- nvim-treesitter
     require('config.mise.nvim-treesitter'),
     -- telescope
@@ -56,5 +56,7 @@ require("lazy").setup({
     require('config.mise.nvim-dap'),
     -- nvim-dap-ui
     require('config.mise.nvim-dap-ui'),
+    -- nvim-ufo
+    require('config.mise.ufo'),
   }
 })

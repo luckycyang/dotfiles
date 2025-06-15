@@ -10,9 +10,8 @@ return {
       "n",
       "<leader>dd",
       function()
-        require("dapui").open() -- 需要 nvim-dap-ui
-        vim.cmd [[DapContinue]] -- 重要：这会延迟加载 nvim-dap
-      end, { desc = "Open Dap-ui" }
+        require("dapui").toggle() -- 需要 nvim-dap-ui
+      end, { desc = "Toggle Dap-ui" }
     )
   end,
 }
