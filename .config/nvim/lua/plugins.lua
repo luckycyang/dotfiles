@@ -57,6 +57,8 @@ require("lazy").setup({
     -- nvim-dap-ui
     require('config.mise.nvim-dap-ui'),
     -- nvim-ufo
-    require('config.mise.ufo'),
+    -- require('config.mise.ufo'),
+    -- toggle term
+    require('config.utils.toggleterm'),
   }
 })
