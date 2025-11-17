@@ -1,9 +1,4 @@
-require("options")
-require("keymaps")
-require('plugins')
-
--- Color theme
-require('colortheme')
-
--- code fold
-require('folding')
+require('cyang.core')
+require('cyang.lazy')
+require('cyang.core.colortheme')
+require('cyang.lsp')
