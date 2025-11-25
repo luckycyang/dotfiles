@@ -24,7 +24,7 @@ vim.g.mapleader = " "
 require("lazy").setup({
   spec = {
     -- import your plugins
-    { import = "cyang.plugins" },
+    { import = "cyang.plugins.init" },
   },
   -- automatically check for plugin updates
   checker = { enabled = true },

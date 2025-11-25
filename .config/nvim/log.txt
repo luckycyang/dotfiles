@@ -1,9 +1,0 @@
-2024-11-08 05:55:28 1731016528188:[Info][Thread 140289096545664] LSP Starting over stdin/stdout 
-
-2024-11-08 05:55:33 1731016533093:[Info][Thread 127082973734272] LSP Starting over stdin/stdout 
-
-2024-11-08 05:55:37 1731016537033:[Info][Thread 127881411896704] LSP Starting over stdin/stdout 
-
-2024-11-08 05:56:10 1731016570430:[Info][Thread 127130319656320] LSP Starting over stdin/stdout 
-
-2024-11-08 05:56:14 1731016574554:[Warning]Missing Content-Length header, or zero-length message.

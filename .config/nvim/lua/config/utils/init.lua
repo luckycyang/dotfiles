@@ -1,8 +1,0 @@
-require("config.utils.witch-key")
-require("config.utils.toggleterm")
-require("config.utils.bufferline")
-require("config.utils.chatgpt")
-require("config.utils.neo-tree")
-require("config.utils.telescope")
-require("config.utils.transparent")
-require("config.utils.nvim-treesitter")
