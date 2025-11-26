@@ -9,5 +9,9 @@ return {
   require('cyang.plugins.witch-key'),
   require('cyang.plugins.telescope'),
   require('cyang.plugins.lazygit'),
+  require('cyang.plugins.noice'),
+  require('cyang.plugins.cmp'),
+  -- require('cyang.plugins.blink'),
+
 
 }

@@ -9,7 +9,11 @@ return {
     "hrsh7th/cmp-cmdline",  -- cmdline auto-completion
   },
   config = function()
-    require("luasnip").config.setup({ enable_autosnippets = true, store_selection_keys = "<Tab>" })
+    require("luasnip").config.setup({
+      enable_autosnippets = true,
+      store_selection_keys = "<Tab>",
+    })
+    require("luasnip/loaders/from_vscode").lazy_load({ paths = "./snippets" })
     require("luasnip.loaders.from_vscode").lazy_load()
     -- Set up nvim-cmp.
     local cmp = require 'cmp'
@@ -89,3 +93,4 @@ require("cmp_git").setup() ]] --
     })
   end
 }
+
