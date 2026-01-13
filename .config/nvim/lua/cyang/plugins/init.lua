@@ -11,6 +11,7 @@ return {
   require('cyang.plugins.lazygit'),
   require('cyang.plugins.noice'),
   require('cyang.plugins.cmp'),
+  require('cyang.plugins.avante'),
   -- require('cyang.plugins.blink'),
 
 
