@@ -5,14 +5,14 @@ return {
     version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
     build = "make install_jsregexp"
   },
-  { "neovim/nvim-lspconfig", },
+  -- { "neovim/nvim-lspconfig", },
+  require('cyang.plugins.nvim-lspconfig'),
   require('cyang.plugins.witch-key'),
   require('cyang.plugins.telescope'),
   require('cyang.plugins.lazygit'),
   require('cyang.plugins.noice'),
-  require('cyang.plugins.cmp'),
+  -- require('cyang.plugins.cmp'),
   require('cyang.plugins.avante'),
-  -- require('cyang.plugins.blink'),
-
-
+  require('cyang.plugins.blink'),
+  require('cyang.plugins.mcphub'),
 }

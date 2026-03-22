@@ -6,7 +6,7 @@ return {
   -- use a release tag to download pre-built binaries
   version = '1.*',
   -- AND/OR build from source, requires nightly: https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust
-  -- build = 'cargo build --release',
+  build = 'cargo build --release',
   -- If you use nix, you can build from source using latest nightly rust with:
   -- build = 'nix run .#build-plugin',
 
@@ -25,7 +25,30 @@ return {
     -- C-k: Toggle signature help (if signature.enabled = true)
     --
     -- See :h blink-cmp-config-keymap for defining your own keymap
-    keymap = { preset = 'default' },
+    keymap = {
+      ["<C-CR>"] = { "show", "show_documentation", "hide_documentation" },
+      ["<C-e>"] = { "hide", "fallback" },
+      ["<CR>"] = { "accept", "fallback" },
+      ["<Tab>"] = {
+        function(cmp)
+          return cmp.select_next()
+        end,
+        "snippet_forward",
+        "fallback",
+      },
+      ["<S-Tab>"] = {
+        function(cmp)
+          return cmp.select_prev()
+        end,
+        "snippet_backward",
+        "fallback",
+      },
+      ["<C-k>"] = { "select_prev", "fallback" },
+      ["<C-j>"] = { "select_next", "fallback" },
+      ["<C-up>"] = { "scroll_documentation_up", "fallback" },
+      ["<C-down>"] = { "scroll_documentation_down", "fallback" },
+
+    },
 
     appearance = {
       -- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'

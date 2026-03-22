@@ -17,13 +17,8 @@ return {
     provider = "openai",
     providers = {
       openai = {
-        endpoint = "https://api.xiaomimimo.com/v1",
-        model = "mimo-v2-flash",
-        timeout = 30000, -- Timeout in milliseconds
-          extra_request_body = {
-            temperature = 0.75,
-            max_tokens = 20480,
-          },
+        endpoint = "https://ollama.suthby.org/api",
+        model = "minimax-m2.5",
       },
     },
   },

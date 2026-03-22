@@ -37,6 +37,9 @@ vim.keymap.set("v", ">", ">gv", opts)
 vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
 vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 
+vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], {noremap = true})
+
+
 -- For nvim-treesitter
 -- 1. Press `gss` to intialize selection. (ss = start selection)
 -- 2. Now we are in the visual mode.
