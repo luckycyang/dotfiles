@@ -1,0 +1,9 @@
+
+include "cfg/input.kdl"
+include "cfg/outputs.kdl"
+include "cfg/layout.kdl"
+include "cfg/layer-rule.cfg"
+include "cfg/hotkey-overlay.kdl"
+include "cfg/animations.kdl"
+include "cfg/window-rules.kdl"
+include "cfg/binds.kdl"
