@@ -8,7 +8,7 @@ vim.lsp.enable('clangd')
 vim.lsp.enable('zls')
 vim.lsp.enable('cmake')
 vim.lsp.enable('ts_ls')
-
+vim.lsp.enable('dartls')
 
 
 -- lsp config

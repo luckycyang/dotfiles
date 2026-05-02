@@ -18,7 +18,7 @@ return {
     providers = {
       openai = {
         endpoint = "https://ollama.suthby.org/api",
-        model = "minimax-m2.5",
+        model = "glm-5.1",
       },
     },
   },

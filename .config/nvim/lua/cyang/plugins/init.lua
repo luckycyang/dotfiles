@@ -14,5 +14,7 @@ return {
   -- require('cyang.plugins.cmp'),
   require('cyang.plugins.avante'),
   require('cyang.plugins.blink'),
-  require('cyang.plugins.mcphub'),
+  require('cyang.plugins.neotree'),
+  require('cyang.plugins.todo-comments'),
+  -- require('cyang.plugins.mcphub'),
 }
